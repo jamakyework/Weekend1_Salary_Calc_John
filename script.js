@@ -2,9 +2,9 @@ console.log("it works");
 
 // userInput array
 var userInput = [];
+
 //addItem
 var addItem = function( name1, name2, idNum1, jobTitle1, annualSal1 ){
-//end addItem
 console.log( 'this is in addItem1:', name1, name2, idNum1, jobTitle1, annualSal1);
 // create newitem object
   var newItem = {
@@ -16,11 +16,13 @@ console.log( 'this is in addItem1:', name1, name2, idNum1, jobTitle1, annualSal1
 };
    // end newItem object
    // push newItem into the userInput array
-     userInput.push(newItem);
+  userInput.push(newItem);
    // end userInput push
 };
-console.log("This is in userInput: ", userInput);
+//end var addItem
 
+console.log("This is in userInput: ", userInput);
+//check to see if push worked
 
 // start clickFunction(acquire user input)
  var clickFunction = function() {
@@ -37,9 +39,10 @@ console.log("This is in userInput: ", userInput);
   var monthlySal = annualSal/12;  //calculate monthly salary
   addItem( firstName, lastName, idNum, jobTitle, annualSal); //send user input to  addItem
   console.log("This is the monthlySal:", monthlySal);
+  // for (var i = 0; i < userInput.length; i++) {
+  //   console.log(clickFunction(userInput[i])); {
+  //     return clickFunction[i];
+  //   }
+  // }//aaargggghhhh infinite loop!!!!
 };
 // end clickFunction
-
-for (var i = 0; i < userInput.length; i++) {
-  console.log(clickFunction(userInput[i]));
-}
