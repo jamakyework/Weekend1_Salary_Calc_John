@@ -32,10 +32,14 @@ console.log("This is in userInput: ", userInput);
                   //console.log(document.getElementById("idNumIn").value);
   var jobTitle =  document.getElementById("jobTitleIn").value;
                   //console.log(document.getElementById("jobTitleIn").value);
-  var annualSal = (document.getElementById("annualSalIn").value)/12;
+  var annualSal = (document.getElementById("annualSalIn").value);
                   //console.log(document.getElementById("annualSalIn").value);
-  //send user input to  addItem
-  addItem( firstName, lastName, idNum, jobTitle, annualSal);
-  console.log("This is the annual salary1:", annualSal);
+  var monthlySal = annualSal/12;  //calculate monthly salary
+  addItem( firstName, lastName, idNum, jobTitle, annualSal); //send user input to  addItem
+  console.log("This is the monthlySal:", monthlySal);
 };
 // end clickFunction
+
+for (var i = 0; i < userInput.length; i++) {
+  console.log(clickFunction(userInput[i]));
+}
