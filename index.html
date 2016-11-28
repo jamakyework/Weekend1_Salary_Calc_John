@@ -2,25 +2,75 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title> Weekend Assignment 1</title>
     <script type='text/javascript' src="script.js" charset="utf-8"></script>
+    <title> Weekend Assignment 1</title>
   </head>
   <body>
-  <div>
+  <form id= "addEmployee">
   <h1>Weekend Assignment 1<h1>
   First name:
-  <input type="text" id= "firstNameIn" name= "firstNameIn" placeholder="enter first name"><br>
+  <input type="text" id= "firstName" placeholder="enter first name"><br>
   Last name:
-  <input type="text" id="lastNameIn" name="lastNameIn" placeholder="enter last name"><br>
+  <input type="text" id="lastName" placeholder="enter last name"><br>
   ID Number:
-  <input type="number" id="idNumIn" name="idNumIn" placeholder="enter id number"><br>
+  <input type="number" id="idNum" placeholder="enter id number"><br>
   Job Title:
-  <input type="text" id="jobTitleIn" name="jobTitleIn" placeholder="enter job title"><br>
+  <input type="text" id="jobTitle" placeholder="enter job title"><br>
   Annual Salary:
-  <input type="number" id="annualSalIn" name="annualSalIn" placeholder="enter annual salary"><br>
-  <button onclick="clickFunction()">Submit</button>
-   <!-- <p id="outputMonthlySal"></p> -->
-  </div>
+  <input type="number" id="annualSal" placeholder="enter annual salary"><br>
+  <button type="button" onclick="clickFunction(); monthlySalCalc"> Submit </button>
+  <!-- <input type="submit" value="Submit"> -->
+  </form>
+
+  <p id="fname">First Name: </p>
+  <p id="lname">Last Name: </p>
+  <p id="idNum">ID Number: </p>
+  <p id="jobTitle">Job Title: </p>
+  <p id="annualSal">Annual Salary: </p>
+  <p id="monthlySal"> Monthly Salary: </p>
+  <p id="totalMonthlySal"> Total Monthly Salary: </p>
+
   </body>
 </html>
+
+<!-- <div id = "printOut">
+</div> -->
+
+<!-- <div class="functionOutput"> -->
+
+<!-- </div> -->
+<!-- <div>
+  <h2>Total Monthly Salary:</h2>
+  <p id="monthlySalaryTotal"></p>
+</div> -->
+
+<!-- table 1 start
+<table id="outputSalary">
+  <tr>
+    <td> <p id="fname">First Name </p></td>
+    <td><p id="lname">Last Name </p></td>
+    <td><p id="idNum">ID Number </p></td>
+    <td><p id="jobTitle">Job Title </p></td>
+    <td><p id="annualSal">Annual Salary </p> </td>
+    <th><p id="monthlySal"> Monthly Salary </p> </th>
+    <td><p id="totalMonthlySal"> Total Monthly Salary</td>
+  </tr>
+</table> -->
+<!-- table 1 end -->
+<!-- table 2 -->
+
+<!-- table 2 start -->
+<!-- <table id="outputSalary">
+  <tr>
+    <th> <p id="fname"> First Name </p> </th>
+    <th> <p id="lname"> Last Name </p> </th>
+    <th> <p id="idNum"> ID Number </p> </th>
+    <th> <p id="jobTitle"> Job Title </p> </th>
+    <th> <p id="annualSal"> Annual Salary </p> </th>
+    <th> <p id="monthlySal"> Monthly Salary </p> </th>
+    <th> <p id="totalMonthlySal"> Total Monthly Salary </p> </th>
+  </tr>
+  </table> -->
+<!-- table 2 end -->
+
 <!-- <button onclick="calculateTotal()">Calculate Total</button> -->
