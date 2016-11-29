@@ -2,77 +2,82 @@ console.log("it works");
 
 // userInput array
 var userInput = [];
-var totalSalCost = 0;
-// console.log("This is in userInput: ", userInput);
-console.log("User userInput log1: ", userInput);
 
 // start clickFunction(acquire user input)
  var clickFunction = function() {
-     var firstName = document.getElementById("firstName").value;
-                     console.log("First Name:", firstName);
-     var lastName =  document.getElementById("lastName").value;
-                     console.log("Last Name:", lastName);
-     var idNum =     document.getElementById("idNum").value;
-                     console.log("ID Number:", idNum);
-     var jobTitle =  document.getElementById("jobTitle").value;
-                     console.log("Job Title:", jobTitle);
-     var annualSal = (document.getElementById("annualSal").value);
-                     console.log("Annual Salary:", annualSal);
-     var monthlySal = annualSal/12;  //calculate monthly salary
-                      console.log("Monthly Salary:", monthlySal);
-     var newItem = [firstName, lastName, idNum, jobTitle, annualSal, monthlySal];
-      userInput.push(newItem); // push  into the userInput array
+    var firstName = document.getElementById("firstName").value;
+                    console.log("First Name:", firstName);
+    var lastName =  document.getElementById("lastName").value;
+                    console.log("Last Name:", lastName);
+    var idNum =     document.getElementById("idNum").value;
+                    console.log("ID Number:", idNum);
+    var jobTitle =  document.getElementById("jobTitle").value;
+                    console.log("Job Title:", jobTitle);
+    var annualSal = (document.getElementById("annualSal").value);
+                    console.log("Annual Salary:", annualSal);
+    var monthlySal = annualSal/12;  //calculate monthly salary
+                     console.log("Monthly Salary:", monthlySal);
+    var newItem = [firstName, lastName, idNum, jobTitle, annualSal, monthlySal];
+      userInput.push(newItem); //push  into the userInput array
       console.log("This is in userInput log2: ", userInput);//check to see if push worked
-        document.getElementById('fname').innerHTML+=(firstName);
-        document.getElementById('lname').innerHTML+=(lastName);
-        document.getElementById('idNum1').innerHTML+=(idNum);
-        document.getElementById('jobTitle1').innerHTML+=(jobTitle);
-        document.getElementById('annualSal1').innerHTML+=(annualSal);
-        document.getElementById('monthlySal').innerHTML+=(monthlySal);
-        document.getElementById('totalMonthlySal').innerHTML+=(monthlySalCalc());
-};
+        document.getElementById('outputTable').innerHTML+=("<br> " + firstName + "<br>");
+        document.getElementById('outputTable').innerHTML+=(lastName + "<br>");
+        document.getElementById('outputTable').innerHTML+=(idNum);
+        document.getElementById('outputTable').innerHTML+=(jobTitle);
+        document.getElementById('outputTable').innerHTML+=(annualSal);
+        document.getElementById('outputTable').innerHTML+=(monthlySal);
+        // document.getElementById('fname').innerHTML+=(firstName);
+        // document.getElementById('lname').innerHTML+=(lastName);
+        // document.getElementById('idNum1').innerHTML+=(idNum);
+        // document.getElementById('jobTitle1').innerHTML+=(jobTitle);
+        // document.getElementById('annualSal1').innerHTML+=(annualSal);
+        // document.getElementById('monthlySal').innerHTML+=(monthlySal);
+        document.getElementById('outputTable').innerHTML+=(monthlySalCalc());
+      };
 // end clickFunctionfunction
-
-//clear Form
-var clearForm = function() {
-  document.getElementById('fname').innerHTML+="";
-  document.getElementById('lname').innerHTML+="";
-  document.getElementById('idNum').innerHTML+="";
-  document.getElementById('jobTitle').innerHTML+="";
-  document.getElementById('annualSal').innerHTML+="";
-  // return clearForm;
-};
-
-function clearForm() {
-  document.getElementById('fname').innerHTML+="";
-  document.getElementById('lname').innerHTML+="";
-  document.getElementById('idNum').innerHTML+="";
-  document.getElementById('jobTitle').innerHTML+="";
-  document.getElementById('annualSal').innerHTML+="";
-  // return clearForm();
-}
 
 //begin totalMonthlySalCalc2
 function monthlySalCalc() {
-    var startSal = 0;
+    var totalSalCost = 0;
     for   (var i = 0; i < userInput.length; i++) {
-    startSal += userInput[i][5];
-    console.log("This is the total monthly cost of salary: ", startSal);
-    }
-    return startSal;
-  }
+    totalSalCost += userInput[i][5];
+    console.log("This is the total monthly cost of salary: ", totalSalCost);
+} return totalSalCost;
+}
   //end totalMonthlySalCalc2
 
-  // //begin totalMonthlySalCalc1
-  // var monthlySalCalc = function () {
-  //     var startSal = 0;
-  //     for   (var i = 0; i < userInput.length; i++) {
-  //     startSal += userInput[i][5];
-  //     console.log("This is the monthly salary: ", startSal);
-  //     }
-  //     return startSal;
-  //   };
-  // //end totalMonthlySalCalc1
+  function clearForm() {
+document.getElementById("empInput").reset();
+}
+// //clear Form
+// var clearForm = function() {
+//   document.getElementById('firstname').innerHTML ="";
+//   document.getElementById('lastName').innerHTML ="";
+//   document.getElementById('idNum').innerHTML ="";
+//   document.getElementById('jobTitle').innerHTML ="";
+//   document.getElementById('annualSal').innerHTML ="";
+// };
+//
+// function clearForm() {
+//   document.getElementById('firstName').innerHTML ="";
+//   document.getElementById('lastName').innerHTML ="";
+//   document.getElementById('idNum').innerHTML ="";
+//   document.getElementById('jobTitle').innerHTML ="";
+//   document.getElementById('annualSal').innerHTML ="";
+// }
+
+
+
+// //begin totalMonthlySalCalc1
+// var monthlySalCalc = function () {
+//     var startSal = 0;
+//     for   (var i = 0; i < userInput.length; i++) {
+//     startSal += userInput[i][5];
+//     console.log("This is the monthly salary: ", startSal);
+//     }
+//     return startSal;
+//   };
+// //end totalMonthlySalCalc1
 
 //start create table function
 // function createTable(){

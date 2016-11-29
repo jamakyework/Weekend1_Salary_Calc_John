@@ -7,21 +7,34 @@
     <title> Weekend Assignment 1</title>
   </head>
   <body>
-  <form id= "addEmployee">
+  <form id= "empInput">
   <h1>Employees Input </h1>
-  First name:
-  <input type="text" id= "firstName" placeholder="enter first name">
-  Last name:
-  <input type="text" id="lastName" placeholder="enter last name">
-  ID Number:
-  <input type="number" id="idNum" placeholder="enter id number">
-  Job Title:
-  <input type="text" id="jobTitle" placeholder="enter job title">
-  Annual Salary:
-  <input type="number" id="annualSal" placeholder="enter annual salary">
-  <button type="button" onclick="clickFunction(); clearForm(); monthlySalCalc()"> Submit </button>
+  <p> First name:    <input type="text" id= "firstName" placeholder="enter first name">
+  Last name:     <input type="text" id="lastName" placeholder="enter last name">
+  ID Number:     <input type="number" id="idNum" placeholder="enter id number">
+  Job Title:     <input type="text" id="jobTitle" placeholder="enter job title">
+  Annual Salary: <input type="number" id="annualSal" placeholder="enter annual salary">
+  </p>
+  <button type="button" onclick="clickFunction(), clearForm()"> Submit </button>
   </form>
-<div id= "employeesOutput">
+  <br>
+  <h1>Employees Output</h1>
+  <table id= 'outputTable'>
+    <thead>
+      <tr>
+        <p>
+        <th id='fname'>First Name</th>
+        <th id='lname'>Last Name</th>
+        <th id='idNum1'>ID Number</th>
+        <th id='jobTitle1'>Job Title</th>
+        <th id='annualSal1'>Employee Annual Salary</th>
+        <th id= 'monthlySal'>Employee Monthly Salary</th>
+        <th id='totalMonthlySal'> Monthly Salary cost</th>
+      </p>
+      </tr>
+</table>
+
+<!-- <div id= "employeesOutput">
  <h1>Employees Output</h1>
   <p id="fname">First Name: </p>
   <p id="lname">Last Name: </p>
@@ -30,8 +43,7 @@
   <p id="annualSal1"> Employee Annual Salary: </p>
   <p id="monthlySal"> Employee Monthly Salary: </p>
   <p id="totalMonthlySal"> Monthly Salary Payout: </p>
-</div>
-
+</div> -->
   </body>
 </html>
 

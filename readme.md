@@ -16,5 +16,4 @@ Weekend Project ReadMe
 
 []  Finally, your logic should calculate all of the employee salaries and report
     back the Monthly cost of  salaries.
-    (use loop to calculate salaries, can use an alert or console log to report
-    monthly cost of salaries)
+    
