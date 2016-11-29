@@ -8,12 +8,11 @@ Weekend Project ReadMe
     Job Title,
     Annual Salary,
 
-[/]  A 'Submit' button should clear out the inputs and your logic should store
+[x]  A 'Submit' button should clear out the inputs and your logic should store
     that information.
 
-[]  Then, that information should be appended to the DOM so
+[x]  Then, that information should be appended to the DOM so
     the user of the application can see the information they just entered.
 
-[]  Finally, your logic should calculate all of the employee salaries and report
+[x]  Finally, your logic should calculate all of the employee salaries and report
     back the Monthly cost of  salaries.
-    

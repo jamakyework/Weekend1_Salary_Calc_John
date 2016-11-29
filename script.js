@@ -29,14 +29,9 @@ var userInput = [];
         // document.getElementById('outputTable').innerHTML+=(monthlySalCalc());
         document.getElementById('outputTable').innerHTML+=("<tr><td>" + firstName +
         "</td><td>" + lastName + "</td><td>" + idNum + "</td><td>" + jobTitle +
-        "</td><td>" + annualSal + "</td><td>" + monthlySal + "</td><td>" + monthlySalCalc() + "</td></tr>");
-        // totalSalCost=+ newItem.annualSalary;
-        // document.getElementById('fname').innerHTML+=(firstName);
-        // document.getElementById('lname').innerHTML+=(lastName);
-        // document.getElementById('idNum1').innerHTML+=(idNum);
-        // document.getElementById('jobTitle1').innerHTML+=(jobTitle);
-        // document.getElementById('annualSal1').innerHTML+=(annualSal);
-        // document.getElementById('monthlySal').innerHTML+=(monthlySal);
+        "</td><td>" + annualSal + "</td><td>" + monthlySal + "</td><td>" +
+        monthlySalCalc() + "</td></tr>");
+        alert ('The total monthly salary is: ' + monthlySalCalc());
       };
       // end clickFunctionfunction
 
