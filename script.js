@@ -26,7 +26,7 @@ var userInput = [];
         monthlySalCalc() + "</td></tr>");
         alert ('The total monthly salary is: ' + monthlySalCalc());
       };
-      // end clickFunctionfunction
+// end clickFunction
 
 //begin totalMonthlySalCalc2
 function monthlySalCalc() {
