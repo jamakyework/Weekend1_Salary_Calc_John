@@ -13,28 +13,32 @@ var userInput = [];
                     console.log("ID Number:", idNum);
     var jobTitle =  document.getElementById("jobTitle").value;
                     console.log("Job Title:", jobTitle);
-    var annualSal = (document.getElementById("annualSal").value);
+    var annualSal = document.getElementById("annualSal").value;
                     console.log("Annual Salary:", annualSal);
     var monthlySal = annualSal/12;  //calculate monthly salary
                      console.log("Monthly Salary:", monthlySal);
     var newItem = [firstName, lastName, idNum, jobTitle, annualSal, monthlySal];
       userInput.push(newItem); //push  into the userInput array
       console.log("This is in userInput log2: ", userInput);//check to see if push worked
-        document.getElementById('outputTable').innerHTML+=("<br> " + firstName + "<br>");
-        document.getElementById('outputTable').innerHTML+=(lastName + "<br>");
-        document.getElementById('outputTable').innerHTML+=(idNum);
-        document.getElementById('outputTable').innerHTML+=(jobTitle);
-        document.getElementById('outputTable').innerHTML+=(annualSal);
-        document.getElementById('outputTable').innerHTML+=(monthlySal);
+        // document.getElementById('outputTable').innerHTML+=(firstName);
+        // document.getElementById('outputTable').innerHTML+=(lastName);
+        // document.getElementById('outputTable').innerHTML+=(idNum);
+        // document.getElementById('outputTable').innerHTML+=(jobTitle);
+        // document.getElementById('outputTable').innerHTML+=(annualSal);
+        // document.getElementById('outputTable').innerHTML+=(monthlySal);
+        // document.getElementById('outputTable').innerHTML+=(monthlySalCalc());
+        document.getElementById('outputTable').innerHTML+=("<tr><td>" + firstName +
+        "</td><td>" + lastName + "</td><td>" + idNum + "</td><td>" + jobTitle +
+        "</td><td>" + annualSal + "</td><td>" + monthlySal + "</td><td>" + monthlySalCalc() + "</td></tr>");
+        // totalSalCost=+ newItem.annualSalary;
         // document.getElementById('fname').innerHTML+=(firstName);
         // document.getElementById('lname').innerHTML+=(lastName);
         // document.getElementById('idNum1').innerHTML+=(idNum);
         // document.getElementById('jobTitle1').innerHTML+=(jobTitle);
         // document.getElementById('annualSal1').innerHTML+=(annualSal);
         // document.getElementById('monthlySal').innerHTML+=(monthlySal);
-        document.getElementById('outputTable').innerHTML+=(monthlySalCalc());
       };
-// end clickFunctionfunction
+      // end clickFunctionfunction
 
 //begin totalMonthlySalCalc2
 function monthlySalCalc() {
@@ -44,9 +48,9 @@ function monthlySalCalc() {
     console.log("This is the total monthly cost of salary: ", totalSalCost);
 } return totalSalCost;
 }
-  //end totalMonthlySalCalc2
+//end totalMonthlySalCalc2
 
-  function clearForm() {
+function clearForm() {
 document.getElementById("empInput").reset();
 }
 // //clear Form
