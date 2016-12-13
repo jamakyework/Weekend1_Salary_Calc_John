@@ -24,19 +24,19 @@ var userInput = [];
         "</td><td>" + lastName + "</td><td>" + idNum + "</td><td>" + jobTitle +
         "</td><td>" + annualSal + "</td><td>" + monthlySal + "</td><td>" +
         monthlySalCalc() + "</td></tr>");
-        alert ('The total monthly salary is: ' + monthlySalCalc());
+        alert ('The total monthly salary payout is: ' + monthlySalCalc());
       };
 // end clickFunction
 
-//begin totalMonthlySalCalc2
+//begin totalMonthlySalCalc
 function monthlySalCalc() {
     var totalSalCost = 0;
     for   (var i = 0; i < userInput.length; i++) {
     totalSalCost += userInput[i][5];
-    console.log("This is the total monthly cost of salary: ", totalSalCost);
+    console.log("This is the total monthly payout of salary: ", totalSalCost);
 } return totalSalCost;
 }
-//end totalMonthlySalCalc2
+//end totalMonthlySalCalc
 
 //begin clearForm function
 function clearForm() {
